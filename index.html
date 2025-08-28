@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Night Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .card {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .activity-link {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+        }
+        
+        .activity-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+            filter: brightness(1.1);
+        }
+        
+        .sparkle {
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex items-center justify-center p-4">
+    <div class="card rounded-3xl p-8 max-w-lg w-full shadow-2xl floating">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="text-3xl sparkle">🌙</span>
+                <span class="text-2xl sparkle">✨</span>
+            </div>
+            <h1 class="text-3xl font-light text-white mb-2">Cozy Night Together</h1>
+            <p class="text-gray-300 text-sm">Distance can't stop our fun time</p>
+        </div>
+        
+        <!-- Watch Together Section -->
+        <div class="mb-8">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">🎬</span>
+                <h2 class="text-xl font-medium text-white">Watch Together</h2>
+            </div>
+            <a href="https://www.netflixparty.com/" target="_blank" class="activity-link block rounded-2xl p-4 text-white mb-3">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="font-medium">Teleparty</p>
+                        <p class="text-sm opacity-90">Netflix • Prime • Disney+</p>
+                    </div>
+                    <span class="text-xl">→</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Play Together Section -->
+        <div class="mb-8">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">🎮</span>
+                <h2 class="text-xl font-medium text-white">Play Together</h2>
+            </div>
+            
+            <div class="space-y-3">
+                <a href="https://skribbl.io/" target="_blank" class="activity-link block rounded-2xl p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-lg">🎨</span>
+                            <div>
+                                <p class="font-medium">Skribbl.io</p>
+                                <p class="text-sm opacity-90">Doodle guessing game</p>
+                            </div>
+                        </div>
+                        <span class="text-xl">→</span>
+                    </div>
+                </a>
+                
+                <a href="https://lichess.org/" target="_blank" class="activity-link block rounded-2xl p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-lg">♟️</span>
+                            <div>
+                                <p class="font-medium">Lichess</p>
+                                <p class="text-sm opacity-90">Chess battles</p>
+                            </div>
+                        </div>
+                        <span class="text-xl">→</span>
+                    </div>
+                </a>
+                
+                <a href="https://play.unofreak.com/" target="_blank" class="activity-link block rounded-2xl p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-lg">🃏</span>
+                            <div>
+                                <p class="font-medium">UNO Online</p>
+                                <p class="text-sm opacity-90">Classic card fun</p>
+                            </div>
+                        </div>
+                        <span class="text-xl">→</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Footer Message -->
+        <div class="text-center pt-6 border-t border-gray-700">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="text-xl sparkle">💌</span>
+            </div>
+            <p class="text-gray-200 italic text-sm leading-relaxed">
+                "Pick whatever you feel like,<br>
+                and we'll dive in together"
+            </p>
+            <div class="flex items-center justify-center gap-2 mt-3">
+                <span class="text-lg sparkle">🌙</span>
+                <span class="text-lg sparkle">✨</span>
+            </div>
+        </div>
+        
+        <!-- Share Button -->
+        <div class="mt-6 text-center">
+            <button onclick="shareInvite()" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+                Share This Invite 📤
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function shareInvite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Cozy Night Together',
+                    text: 'Join me for a cozy night of movies and games! 🌙✨',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const button = event.target;
+                    const originalText = button.textContent;
+                    button.textContent = 'Link Copied! ✅';
+                    button.style.background = 'linear-gradient(to right, #10b981, #059669)';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = 'linear-gradient(to right, #9333ea, #ec4899)';
+                    }, 2000);
+                });
+            }
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9764a4c0273703e8',t:'MTc1NjM5Mjg2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
